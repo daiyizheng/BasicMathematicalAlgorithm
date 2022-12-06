@@ -18,9 +18,10 @@ def rotation(theta,r):
     r=np.dot(R,r)
     return np.array(r).flatten()
 a=[3,0] #初始点
+rotation_rate = 5
 plt.figure(figsize=(6,6))
 for i in range(72):
-    b=rotation(5,a) #每次旋转5°角
+    b=rotation(rotation_rate,a) #每次旋转5°角
     a=b
     plt.xlim([-5,5])
     plt.ylim([-5,5])
